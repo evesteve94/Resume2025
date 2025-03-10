@@ -1,0 +1,186 @@
+[
+  {
+    "title": "JavaScript",
+    "image": "./js.png",
+    "alt": "Orange JavaScript Logo",
+    "skill": "Skilled",
+    "course": "Web Development",
+    "description": "At Chas Academy, I mastered vanilla JS, deepening my understanding of syntax, modular code, and optimization. At Advenica, I applied these skills in real-world projects, refining best practices."
+  },
+  {
+    "title": "TypeScript",
+    "image": "./ts.png",
+    "alt": "Orange TypeScript Logo",
+    "skill": "Skilled",
+    "course": "Avancerad frontend development Typescript",
+    "description": "TS boosts readability and maintainability. My group project 'Quire' at Chas Academy was built entirely in TypeScript, strengthening my confidence in structured and scalable code. Nowadays, it's my go-to-language."
+  },
+  {
+    "title": "React",
+    "image": "./react.png",
+    "alt": "Orange React Logo",
+    "skill": "Skilled",
+    "course": "React",
+    "description": "React’s component-based architecture has changed my approach to frontend development. At Chas Academy and Advenica, I built scalable, reusable UI components and dynamic web apps."
+  },
+  {
+    "title": "Java",
+    "image": "./java.png",
+    "alt": "Orange Java Logo",
+    "skill": "Novice",
+    "course": "Programmering 1",
+    "description": "Java was my introduction to coding at Chas Academy, sparking my passion for development. While not my main focus, I appreciate its structured and object-oriented approach."
+  },
+  {
+    "title": "Vue.js",
+    "image": "./vue.png",
+    "alt": "Orange Vue.js Logo",
+    "skill": "Intermediate",
+    "course": "Vue.js",
+    "description": "Vue’s reactivity system and lightweight structure make it a great framework for building fast, efficient applications. I’m eager to apply its strengths in real projects."
+  },
+  {
+    "title": "Git",
+    "image": "./git.png",
+    "alt": "Orange Git Logo",
+    "skill": "Skilled",
+    "course": "Web Development",
+    "description": "Git is second nature. Through group projects at Chas Academy and real-world scenarios at Advenica, I’ve mastered version control, conflict resolution, and structured branching strategies."
+  },
+  {
+    "title": "GitHub",
+    "image": "./githuborange.png",
+    "alt": "Orange GitHub Logo",
+    "skill": "Skilled",
+    "course": "Web Development",
+    "description": "GitHub feels like home. I’ve used it extensively for collaboration, code reviews, and workflow management in projects at Chas Academy and during my internship at Advenica."
+  },
+  {
+    "title": "Agile Working Methods",
+    "image": "./agile.png",
+    "alt": "Orange Kanban Logo",
+    "skill": "Skilled",
+    "course": "Agile Working Methods",
+    "description": "Working with Scrum, Kanban, and Extreme Programming at Chas Academy and Advenica gave me hands-on experience in agile workflows and real-world team dynamics."
+  },
+  {
+    "title": "Node.js",
+    "image": "./node.png",
+    "alt": "Orange Node.js Logo",
+    "skill": "Intermediate",
+    "course": "Skilled Backend Development",
+    "description": "Backend development fascinates me! At Chas Academy, I’ve built APIs and explored authentication, databases, and server-side logic using Node.js."
+  },
+  {
+    "title": "Figma",
+    "image": "./figma.png",
+    "alt": "Orange Figma Logo",
+    "skill": "Intermediate",
+    "course": "UI/UX Design",
+    "description": "Figma is an essential tool in my UI/UX workflow. From wireframing to prototyping, I use it to create intuitive designs that translate seamlessly into code."
+  },
+  {
+    "title": "HTML",
+    "image": "./html.png",
+    "alt": "Orange HTML Logo",
+    "skill": "Skilled",
+    "course": "Web Development",
+    "description": "HTML is the foundation of my web development skills. At Chas Academy and Advenica, I’ve created well-structured, semantic, and accessible layouts."
+  },
+  {
+    "title": "CSS",
+    "image": "./css.png",
+    "alt": "Orange CSS Logo",
+    "skill": "Skilled",
+    "course": "Web Development",
+    "description": "I love pushing CSS boundaries! From responsive layouts to animations, I continuously refine my styling skills to create modern, visually striking designs."
+  },
+  {
+    "title": "SQL",
+    "image": "./sql.png",
+    "alt": "Orange SQL Logo",
+    "skill": "Intermediate",
+    "course": "Database Management",
+    "description": "SQL is key for managing structured data efficiently. I am becoming more familiar and comfortable with relational databases, queries, and optimization techniques for scalable backend solutions."
+  },
+  {
+    "title": "Python",
+    "image": "./python.png",
+    "alt": "Orange Python Logo",
+    "skill": "Novice",
+    "course": "Python summer course",
+    "description": "Python’s simplicity and versatility make it an excellent language for problem-solving, automation, and backend development."
+  },
+  {
+    "title": "Docker",
+    "image": "./docker.png",
+    "alt": "Orange Docker Logo",
+    "skill": "Novice",
+    "course": "Hosting & CI/CD",
+    "description": "Docker enables efficient containerization and deployment. I’m eager to deepen my understanding of DevOps workflows and scalable infrastructure."
+  },
+  {
+    "title": "Jira",
+    "image": "./jira.png",
+    "alt": "Orange Jira Logo",
+    "skill": "Intermediate",
+    "course": "Hosting & CI/CD",
+    "description": "Jira helps me manage projects efficiently. I understand its ticketing system, sprint planning, and workflow customization for agile development."
+  },
+  {
+    "title": "C++",
+    "image": "./c-plus-plus.png",
+    "alt": "Orange C plus plus Logo",
+    "skill": "Novice",
+    "course": "C++ Summer Course",
+    "description": "C++ is a powerful language for performance-driven applications. I appreciate its low-level control and efficiency in system programming."
+  },
+  {
+    "title": "Express.js",
+    "image": "./express.png",
+    "alt": "Orange Express.js Logo",
+    "skill": "Intermediate",
+    "course": "Backend Development",
+    "description": "Express simplifies backend development. I’ve built RESTful APIs, handled middleware, and improved my understanding of server-side architecture."
+  },
+  {
+    "title": "MongoDB",
+    "image": "./mongodb.png",
+    "alt": "Orange Mongo DB Logo",
+    "skill": "Intermediate",
+    "course": "Backend Development",
+    "description": "MongoDB’s flexibility in handling unstructured data makes it perfect for modern applications. I’ve worked with queries, indexing, and schema design."
+  },
+  {
+    "title": "AWS",
+    "image": "./aws.png",
+    "alt": "Orange AWS Logo",
+    "skill": "Novice",
+    "course": "Hosting & CI/CD",
+    "description": "AWS provides scalable cloud solutions. I’m eager to gain hands-on experience with its infrastructure, services, and deployment strategies."
+  },
+  {
+    "title": "Redux",
+    "image": "./redux.png",
+    "alt": "Orange Redux Logo",
+    "skill": "Novice",
+    "course": "React",
+    "description": "Redux was challenging at first, but now I see its value in managing global state efficiently, reducing prop drilling, and improving app performance."
+  },
+  {
+    "title": "Prisma",
+    "image": "./prisma.png",
+    "alt": "Orange Prisma Logo",
+    "skill": "Intermediate",
+    "course": "Database Management",
+    "description": "Prisma makes database interactions effortless. I’ve used it to define schemas, manage migrations, and write efficient queries with TypeScript."
+  },
+  {
+    "title": "Docusaurus",
+    "image": "./docusaurus.png",
+    "alt": "Orange Docusaurus Logo",
+    "skill": "Skilled",
+    "course": "Advenica Internship",
+    "description": "Docusaurus has been my go-to tool for transforming Advenicas old documentation site, to something far more dynamic and user-friendly. I’ve used it to create structured, professional, and well-maintained developer docs for Advanica's Knowledge Base."
+  }
+]

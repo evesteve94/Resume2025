@@ -1,0 +1,47 @@
+[
+  {
+    "image": "./advenica.png",
+    "company": "Advenica",
+    "name": "Christian Nord",
+    "jobtitle": "Senior Engineer Manager",
+    "email": "christian.nord@advenica.com",
+    "phone": "(SMS) 070 512 09 70",
+    "alt": "Orange Advenica Logo"
+  },
+  {
+    "image": "./qlok.png",
+    "company": "Chas Academy",
+    "name": "Arnar Johansson",
+    "jobtitle": "Fullstack Developer/Teacher",
+    "email": "arnar.johannsson@qlok.se",
+    "phone": "073 525 41 42",
+    "alt": "Orange Qlok Logo"
+  },
+  {
+    "image": "./malmo.png",
+    "company": "Malmö University",
+    "name": "Caroline Adolfsson",
+    "jobtitle": "PHD Student",
+    "email": "caroline.adolfsson@mau.se",
+    "phone": "076 426 1001",
+    "alt": "Orange Malmo University Logo"
+  },
+  {
+    "image": "./lernia.png",
+    "company": "Lernia & Sandvik",
+    "name": "Susanne Moe",
+    "jobtitle": "Konsultchef",
+    "email": "susanne.moe@lernia.se",
+    "phone": "+46 722 54 11 54",
+    "alt": "Orange Lernia Logo"
+  },
+  {
+    "image": "./eig.png",
+    "company": "European Integration Group",
+    "name": "Turgut Kaan Akkoca",
+    "jobtitle": "Co-Founder",
+    "email": "kaan@eig.ist",
+    "phone": "+90 537 451 82 18 ",
+    "alt": "Orange EIG Logo"
+  }
+]
