@@ -26,7 +26,7 @@ const PortfolioPage = () => {
               key={selectedProject.image}
               className="screenshot"
               style={{
-                backgroundImage: `url(https://your-netlify-site.netlify.app${selectedProject.image}?nf_resize=fit&w=800)`,
+                backgroundImage: `url(${selectedProject.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
