@@ -7,11 +7,11 @@ import skills from "../data/skills.json";
 import references from "../data/references.json";
 
 //profile images
-import first from "../../public/frontpage.jpg";
-import second from "../../public/apart.jpg";
-import third from "../../public/sweet.jpg";
-import forth from "../../public/silly.jpg";
-import fifth from "../../public/eyes-closed.jpg";
+import first from "/frontpage.jpg";
+import second from "/apart.jpg";
+import third from "/sweet.jpg";
+import forth from "/silly.jpg";
+import fifth from "/eyes-closed.jpg";
 
 const About = () => (
   <>

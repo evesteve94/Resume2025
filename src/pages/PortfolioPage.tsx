@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import projects from "../data/projects.json"; // assuming the file exists
-import { FaAnglesRight, FaAnglesLeft, FaGithub } from "react-icons/fa6";
+import { FaAnglesRight, FaAnglesLeft, FaGithub, FaEye } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
 
 const PortfolioPage = () => {
@@ -40,15 +40,6 @@ const PortfolioPage = () => {
                 <div className="project-links">
                   <mark>
                     <p>{selectedProject.date}</p>
-                  </mark>
-                  <mark>
-                    <a
-                      href={selectedProject.gitHubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaGithub /> GitHub Repo
-                    </a>
                   </mark>
                   <mark>
                     <p>{selectedProject.course}</p>
@@ -104,7 +95,15 @@ const PortfolioPage = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View Project
+              <FaEye /> View Project
+            </a>
+            <a
+              className="view-project"
+              href={selectedProject.gitHubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub /> GitHub Repo
             </a>
           </motion.div>
         </AnimatePresence>
