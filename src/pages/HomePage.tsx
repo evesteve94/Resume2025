@@ -18,16 +18,16 @@ const images = [
   "/eyes-closed.jpg",
 ];
 
-const preloadImages = (imageUrls: string[]) => {
-  imageUrls.forEach((url) => {
-    const img = new Image();
-    img.src = url;
-  });
-};
+// const preloadImages = (imageUrls: string[]) => {
+//   imageUrls.forEach((url) => {
+//     const img = new Image();
+//     img.src = url;
+//   });
+// };
 
-useEffect(() => {
-  preloadImages(images);
-}, []);
+// useEffect(() => {
+//   preloadImages(images);
+// }, []);
 
 const About = () => (
   <>
