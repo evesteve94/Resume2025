@@ -27,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
 }
 
@@ -40,7 +40,7 @@ h6 {
 body {
   width: 100%;
   height: 100vh; /* Ensure the body takes full viewport height */
-  background-color: var(--background);
+  background-color: var(--orange);
   color: var(--text);
   display: flex;
   flex-direction: column;
@@ -97,7 +97,7 @@ li button {
 @media screen and (max-width: 900px) {
   .hello-container {
     grid-template-columns: 1fr; /* Switch to a single column */
-    grid-template-rows: 1fr 1fr; /* Two stacked rows */
+    grid-template-rows: 2fr 2fr; /* Two stacked rows */
   }
 
   .greeting,
@@ -130,9 +130,14 @@ li button {
   transition: color 0.3s ease;
 }
 
-.about-nav button:hover,
+.about-nav button:hover {
+  color: #fdac34;
+  transform: scale(1.2);
+}
+
 .about-nav .active {
   color: #fdac34;
+  transform: scale(1.1);
 }
 
 .nav-icon {
@@ -140,13 +145,21 @@ li button {
 }
 
 .nav-icon:hover {
-  transform: scale(1.1);
   color: #fdac34;
 }
 /* 
 .about-nav .active {
   text-transform: uppercase;
 } */
+
+.download-link {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.download-link:hover {
+  color: #fdac34;
+}
 
 .greeting,
 .img-div {
@@ -167,7 +180,7 @@ li button {
 
 .greeting {
   background-color: #e2725b;
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -313,7 +326,7 @@ mark {
 
 .ref-card,
 .job-card {
-  width: 45%;
+  width: 47%;
 }
 
 .skill-card {
@@ -327,10 +340,18 @@ mark {
 }
 
 @media screen and (max-width: 450px) {
+  .hello-container {
+    grid-template-columns: 1fr; /* Switch to a single column */
+    grid-template-rows: 3fr 2fr; /* Two stacked rows */
+  }
   .ref-card,
   .job-card,
   .skill-card {
     width: 100%;
+  }
+
+  html {
+    font-size: 12px;
   }
 }
 
@@ -352,7 +373,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   /* gap: 3rem; */
-  padding: 1rem 2rem;
+  padding: 1rem;
   text-decoration: none;
 }
 

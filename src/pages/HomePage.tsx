@@ -13,14 +13,15 @@ import education from "../data/education.json";
 import jobs from "../data/work.json";
 import skills from "../data/skills.json";
 import references from "../data/references.json";
+import "../styles/home.css";
 
 // Profile images from public folder
 const images = [
   "/frontpage.jpg",
-  "/apart.jpg",
+  "/eyes-closed.jpg",
   "/sweet.jpg",
   "/silly.jpg",
-  "/eyes-closed.jpg",
+  "/apart.jpg",
 ];
 
 const About = () => (
@@ -30,12 +31,7 @@ const About = () => (
       my name is Eva.
     </h3>
     <h4 className="undertitle">fullstack developer </h4>
-    <a
-      style={{ fontWeight: "bolder" }}
-      className="footer-link"
-      href="/EvaBjorlingEnglishCV2025.pdf"
-      download
-    >
+    <a className="download-link" href="/EvaBjorlingEnglishCV2025.pdf" download>
       CV <FaDownload />
     </a>
     <p style={{ marginTop: "4rem" }}>
@@ -52,7 +48,9 @@ export const Education = () => (
         <img src={edu.image} alt={edu.alt} className="education-logo" />
         <h3 className="card-title">{edu.education}</h3>
         <h4>{edu.school}</h4>
-        <p className="education-time">{edu.time}</p>
+        <p className="education-time">
+          <strong>{edu.time}</strong>
+        </p>
         <p className="education-description">{edu.description}</p>
       </div>
     ))}
@@ -68,7 +66,9 @@ export const Work = () => (
           {job.work} <br />
           {job.company}
         </h3>
-        <p className="education-time">{job.time}</p>
+        <p className="education-time">
+          <strong>{job.time}</strong>
+        </p>
         <p className="education-description">{job.description}</p>
       </div>
     ))}
@@ -82,7 +82,9 @@ export const Skills = () => (
         <img src={skill.image} alt={skill.alt} className="skill-icon" />
         <h3 className="card-title">{skill.title}</h3>
         <h4>Level: {skill.skill}</h4>
-        <p className="education-time">Course: {skill.course}</p>
+        <p className="education-time">
+          <strong>Course: {skill.course}</strong>
+        </p>
         <p className="education-description">{skill.description}</p>
       </div>
     ))}
@@ -172,7 +174,7 @@ const HomePage = () => {
             initial={{ x: direction * 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -direction * 100, opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
           >
             {components[currentComponent]}
           </motion.div>
@@ -191,7 +193,7 @@ const HomePage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
           />
         </AnimatePresence>
       </div>

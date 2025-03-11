@@ -33,7 +33,7 @@ const PortfolioPage = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
             >
               {/* Overlay */}
               <div className="overlay">
@@ -84,7 +84,7 @@ const PortfolioPage = () => {
             initial={{ x: direction * 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -direction * 100, opacity: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
           >
             <h2 className="project-title">{selectedProject.title}</h2>
             <p>{selectedProject.description}</p>

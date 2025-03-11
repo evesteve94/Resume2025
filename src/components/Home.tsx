@@ -3,6 +3,7 @@ import Header from "./Header.tsx";
 import Footer from "./Footer.tsx";
 import HomePage from "../pages/HomePage.tsx";
 import PortfolioPage from "../pages/PortfolioPage.tsx";
+import "../styles/home.css";
 
 const Home = () => {
   const [currentPage, setCurrentPage] = useState<"home" | "portfolio">("home");
