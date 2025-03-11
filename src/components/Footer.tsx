@@ -7,18 +7,21 @@ const Footer = () => {
         <div className="footer-left">
           <h3>Downloads</h3>
           <li>
-            <a className="footer-link" href="#">
+            <a
+              className="footer-link"
+              href="/EvaBjorlingEnglishCV2025.pdf"
+              download
+            >
               English CV
             </a>
           </li>
           <li>
-            <a className="footer-link" href="#">
+            <a
+              className="footer-link"
+              href="/EvaBjorlingSweCV2025.pdf"
+              download
+            >
               Swedish CV
-            </a>
-          </li>{" "}
-          <li>
-            <a className="footer-link" href="#">
-              Greeting
             </a>
           </li>
         </div>
@@ -36,13 +39,12 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a className="footer-link" href="#">
+            <a
+              className="footer-link"
+              href="https://github.com/evesteve94"
+              target="_blank"
+            >
               Github
-            </a>
-          </li>
-          <li>
-            <a className="footer-link" href="#">
-              Twitter
             </a>
           </li>
         </div>

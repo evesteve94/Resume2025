@@ -326,6 +326,14 @@ mark {
   max-height: 40px;
 }
 
+@media screen and (max-width: 450px) {
+  .ref-card,
+  .job-card,
+  .skill-card {
+    width: 100%;
+  }
+}
+
 .skill-icon {
   height: 35px;
 }
@@ -338,7 +346,7 @@ footer {
 }
 
 .footer-content {
-  min-width: 1000px;
+  width: 100%;
   max-width: 1800px;
   display: flex;
   justify-content: space-between;
@@ -354,7 +362,7 @@ footer {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 0.5rem;
 }
 
 .footer-right {
@@ -368,4 +376,26 @@ footer {
 .footer-link {
   text-decoration: none;
   color: var(--text);
+}
+
+@media screen and (max-width: 900px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+  .project-about {
+    max-height: 44vh;
+  }
+
+  .project-img-div,
+  .project-img-div .img-wrapper {
+    width: 100%;
+    max-width: 600px;
+    /* max-height: 22vh; */
+    overflow: hidden;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import projects from "../data/projects.json"; // assuming the file exists
 import { FaAnglesRight, FaAnglesLeft, FaGithub, FaEye } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
@@ -86,7 +86,7 @@ const PortfolioPage = () => {
             exit={{ x: -direction * 100, opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2>{selectedProject.title}</h2>
+            <h2 className="project-title">{selectedProject.title}</h2>
             <p>{selectedProject.description}</p>
             <p>{selectedProject.details}</p>
             <a

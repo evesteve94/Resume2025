@@ -1,17 +1,22 @@
-import React, { useState } from "react";
-import { FaAnglesRight, FaAnglesLeft } from "react-icons/fa6";
+import { useState } from "react";
+import { FaAnglesRight, FaAnglesLeft, FaGraduationCap } from "react-icons/fa6";
+import { FaBriefcase } from "react-icons/fa";
+import { HiSparkles } from "react-icons/hi2";
+import { MdWavingHand, MdSupervisorAccount } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
 import education from "../data/education.json";
 import jobs from "../data/work.json";
 import skills from "../data/skills.json";
 import references from "../data/references.json";
 
-//profile images
-import first from "/frontpage.jpg";
-import second from "/apart.jpg";
-import third from "/sweet.jpg";
-import forth from "/silly.jpg";
-import fifth from "/eyes-closed.jpg";
+// Profile images from public folder
+const images = [
+  "/frontpage.jpg",
+  "/apart.jpg",
+  "/sweet.jpg",
+  "/silly.jpg",
+  "/eyes-closed.jpg",
+];
 
 const About = () => (
   <>
@@ -86,10 +91,15 @@ export const References = () => (
   </div>
 );
 
-const images = [first, second, third, forth, fifth]; // Background images in order
-
 const HomePage = () => {
-  const titles = ["Hello", "Education", "Work", "Skills", "References"];
+  const titles = [
+    { title: "Hi", icon: <MdWavingHand /> },
+    { title: "Education", icon: <FaGraduationCap /> },
+    { title: "Work", icon: <FaBriefcase /> },
+    { title: "Skills", icon: <HiSparkles /> },
+    { title: "References", icon: <MdSupervisorAccount /> },
+  ];
+
   const components = [
     <About />,
     <Education />,
@@ -127,7 +137,9 @@ const HomePage = () => {
               className={index === currentComponent ? "active" : ""}
               onClick={() => handleSwitchComponent(index)}
             >
-              {title}
+              <span>
+                {title.icon} {index === currentComponent && title.title}
+              </span>
             </button>
           ))}
           <FaAnglesRight

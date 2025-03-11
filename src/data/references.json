@@ -27,6 +27,14 @@
     "alt": "Orange Malmo University Logo"
   },
   {
+    "image": "./sandvik.png",
+    "name": "Jonny Lindqvist",
+    "jobtitle": "Warehouse Manager",
+    "email": "jonny.lindqvist@sandvik.se",
+    "phone": "073 333 83 90",
+    "alt": "Orange Sandvik Logo"
+  },
+  {
     "image": "./lernia.png",
     "company": "Lernia & Sandvik",
     "name": "Susanne Moe",
