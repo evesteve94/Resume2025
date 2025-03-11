@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { FaAnglesRight, FaAnglesLeft, FaGraduationCap } from "react-icons/fa6";
+import {
+  FaAnglesRight,
+  FaAnglesLeft,
+  FaGraduationCap,
+  FaDownload,
+} from "react-icons/fa6";
 import { FaBriefcase } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi2";
 import { MdWavingHand, MdSupervisorAccount } from "react-icons/md";
@@ -24,7 +29,15 @@ const About = () => (
       Hi, <br />
       my name is Eva.
     </h3>
-    <h4 className="undertitle">fullstack developer</h4>
+    <h4 className="undertitle">fullstack developer </h4>
+    <a
+      style={{ fontWeight: "bolder" }}
+      className="footer-link"
+      href="/EvaBjorlingEnglishCV2025.pdf"
+      download
+    >
+      CV <FaDownload />
+    </a>
     <p style={{ marginTop: "4rem" }}>
       I enjoy finding creative solutions to tricky problems.
     </p>
