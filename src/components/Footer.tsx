@@ -29,7 +29,7 @@ const Footer = () => {
           <h3>Eva Björling</h3>
           <p>Fullstack Developer</p>
           <p>94evbj42@gmail.com</p>
-          <p>+46 70 123 45 67</p>
+          <p>+46 73 877 41 88</p>
         </div>
         <div className="footer-right">
           <h3>Socials</h3>
