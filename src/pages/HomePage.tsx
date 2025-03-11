@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaAnglesRight, FaAnglesLeft, FaGraduationCap } from "react-icons/fa6";
 import { FaBriefcase } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi2";
@@ -17,6 +17,17 @@ const images = [
   "/silly.jpg",
   "/eyes-closed.jpg",
 ];
+
+const preloadImages = (imageUrls: string[]) => {
+  imageUrls.forEach((url) => {
+    const img = new Image();
+    img.src = url;
+  });
+};
+
+useEffect(() => {
+  preloadImages(images);
+}, []);
 
 const About = () => (
   <>
@@ -173,7 +184,7 @@ const HomePage = () => {
             key={currentComponent}
             className="img-div"
             style={{
-              backgroundImage: `url(${images[currentComponent]})`,
+              backgroundImage: `url(https://your-netlify-site.netlify.app${images[currentComponent]}?nf_resize=fit&w=800)`,
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
