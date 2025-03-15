@@ -13,6 +13,7 @@
   font-family: "Roboto", sans-serif;
   border: none;
   list-style: none;
+  text-decoration: none;
 }
 
 button:hover {
@@ -77,7 +78,8 @@ nav ul {
   gap: 1rem;
 }
 
-li button {
+li,
+.nav-links {
   text-decoration: none;
   color: var(--text);
   background-color: transparent;

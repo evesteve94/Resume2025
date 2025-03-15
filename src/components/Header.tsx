@@ -1,33 +1,34 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
-interface HeaderProps {
-  currentPage: "home" | "portfolio";
-  setCurrentPage: (page: "home" | "portfolio") => void;
-}
+const Header: React.FC = () => {
+  const location = useLocation();
 
-const Header: React.FC<HeaderProps> = ({ currentPage, setCurrentPage }) => {
   return (
     <header>
       <h1>Eva Björling</h1>
       <nav>
         <ul>
           <li>
-            <button
-              onClick={() => setCurrentPage("home")}
-              style={{ color: currentPage === "home" ? "#d3d0c0" : "inherit" }}
+            <Link
+              to="/"
+              style={{
+                color: location.pathname === "/" ? "#d3d0c0" : "inherit",
+              }}
             >
               Home
-            </button>
+            </Link>
           </li>
           <li>
-            <button
-              onClick={() => setCurrentPage("portfolio")}
+            <Link
+              to="/portfolio"
               style={{
-                color: currentPage === "portfolio" ? "#d3d0c0" : "inherit",
+                color:
+                  location.pathname === "/portfolio" ? "#d3d0c0" : "inherit",
               }}
             >
               Portfolio
-            </button>
+            </Link>
           </li>
         </ul>
       </nav>

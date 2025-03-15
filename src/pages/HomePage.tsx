@@ -1,18 +1,15 @@
-import { useState } from "react";
-import {
-  FaAnglesRight,
-  FaAnglesLeft,
-  FaGraduationCap,
-  FaDownload,
-} from "react-icons/fa6";
+import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { FaAnglesRight, FaAnglesLeft, FaGraduationCap } from "react-icons/fa6";
 import { FaBriefcase } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi2";
 import { MdWavingHand, MdSupervisorAccount } from "react-icons/md";
-import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion
-import education from "../data/education.json";
-import jobs from "../data/work.json";
-import skills from "../data/skills.json";
-import references from "../data/references.json";
+import { motion, AnimatePresence } from "framer-motion";
+import About from "../components/About";
+import Work from "../components/Work";
+import Education from "../components/Education";
+import Skills from "../components/Skills";
+import References from "../components/References";
 import "../styles/home.css";
 
 // Profile images from public folder
@@ -24,107 +21,43 @@ const images = [
   "/apart.jpg",
 ];
 
-const About = () => (
-  <>
-    <h3 className="hello">
-      Hi, <br />
-      my name is Eva.
-    </h3>
-    <h4 className="undertitle">fullstack developer </h4>
-    <a className="download-link" href="/EvaBjorlingEnglishCV2025.pdf" download>
-      CV <FaDownload />
-    </a>
-    <p style={{ marginTop: "4rem" }}>
-      I enjoy finding creative solutions to tricky problems.
-    </p>
-    <p style={{ marginTop: "4rem", textAlign: "left" }}>And my dog, Stevie.</p>
-  </>
-);
+// Sections list with IDs and Icons
+const sections = [
+  { id: "about", title: "Hi", icon: <MdWavingHand /> },
+  { id: "education", title: "Education", icon: <FaGraduationCap /> },
+  { id: "work", title: "Work", icon: <FaBriefcase /> },
+  { id: "skills", title: "Skills", icon: <HiSparkles /> },
+  { id: "references", title: "References", icon: <MdSupervisorAccount /> },
+];
 
-export const Education = () => (
-  <div className="education-list">
-    {education.map((edu, index) => (
-      <div className="education-card" key={index}>
-        <img src={edu.image} alt={edu.alt} className="education-logo" />
-        <h3 className="card-title">{edu.education}</h3>
-        <h4>{edu.school}</h4>
-        <p className="education-time">
-          <strong>{edu.time}</strong>
-        </p>
-        <p className="education-description">{edu.description}</p>
-      </div>
-    ))}
-  </div>
-);
+// Components array (for easier mapping)
+const components = [
+  <About />,
+  <Education />,
+  <Work />,
+  <Skills />,
+  <References />,
+];
 
-export const Work = () => (
-  <div className="work-list">
-    {jobs.map((job, index) => (
-      <div className="job-card" key={index}>
-        <img src={job.image} alt={job.alt} className="education-logo" />
-        <h3 className="card-title">
-          {job.work} <br />
-          {job.company}
-        </h3>
-        <p className="education-time">
-          <strong>{job.time}</strong>
-        </p>
-        <p className="education-description">{job.description}</p>
-      </div>
-    ))}
-  </div>
-);
-
-export const Skills = () => (
-  <div className="skills-list">
-    {skills.map((skill, index) => (
-      <div className="skill-card" key={index}>
-        <img src={skill.image} alt={skill.alt} className="skill-icon" />
-        <h3 className="card-title">{skill.title}</h3>
-        <h4>Level: {skill.skill}</h4>
-        <p className="education-time">
-          <strong>Course: {skill.course}</strong>
-        </p>
-        <p className="education-description">{skill.description}</p>
-      </div>
-    ))}
-  </div>
-);
-
-export const References = () => (
-  <div className="references-list">
-    {references.map((ref, index) => (
-      <div className="ref-card" key={index}>
-        <img src={ref.image} alt="" />
-        <h3 className="card-title">{ref.name}</h3>
-        <h4>{ref.jobtitle}</h4>
-        <h4>{ref.company}</h4>
-        <p>{ref.email}</p>
-        <p>{ref.phone}</p>
-      </div>
-    ))}
-  </div>
-);
-
+// Home Page Component
 const HomePage = () => {
-  const titles = [
-    { title: "Hi", icon: <MdWavingHand /> },
-    { title: "Education", icon: <FaGraduationCap /> },
-    { title: "Work", icon: <FaBriefcase /> },
-    { title: "Skills", icon: <HiSparkles /> },
-    { title: "References", icon: <MdSupervisorAccount /> },
-  ];
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const components = [
-    <About />,
-    <Education />,
-    <Work />,
-    <Skills />,
-    <References />,
-  ];
+  // Get initial component index from URL hash
+  const getInitialComponent = () => {
+    const hash = location.hash.replace("#", "");
+    const index = sections.findIndex((section) => section.id === hash);
+    return index !== -1 ? index : 0;
+  };
 
-  const [currentComponent, setCurrentComponent] = useState(0);
+  const [currentComponent, setCurrentComponent] = useState(getInitialComponent);
   const [direction, setDirection] = useState(1);
+
+  // Update the URL when the component changes
+  useEffect(() => {
+    navigate(`#${sections[currentComponent].id}`, { replace: true });
+  }, [currentComponent, navigate]);
 
   const handleSwitchComponent = (index: number) => {
     if (index === currentComponent) return;
@@ -146,14 +79,14 @@ const HomePage = () => {
             }
             style={{ cursor: "pointer" }}
           />
-          {titles.map((title, index) => (
+          {sections.map((section, index) => (
             <button
               key={index}
               className={index === currentComponent ? "active" : ""}
               onClick={() => handleSwitchComponent(index)}
             >
               <span>
-                {title.icon} {index === currentComponent && title.title}
+                {section.icon} {index === currentComponent && section.title}
               </span>
             </button>
           ))}

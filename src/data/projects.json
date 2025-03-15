@@ -14,6 +14,21 @@
     "date": "Dec 2024"
   },
   {
+    "title": "Vanilla JS CV",
+    "image": "./vanilla-cv.png",
+    "icon": "<GiSeatedMouse />",
+    "description": "This project was born out of my passion for UX right after completing my Advanced Web Development course. Enthralled by the endless possibilities of vanilla JavaScript DOM manipulation (before learning frameworks), I had an absolute blast bringing this site to life!",
+    "details": "As I delved into Figma to create mock layouts and wireframes, I saw the perfect opportunity to give my resume site a creative twist. I envisioned a dynamic experience with a clear color scheme, language options, smooth animations, and interactive elements that revealed more information on click. However, as my skills grew, I realized that clarity, ease of navigation, and a streamlined user experience were just as important as aesthetics. That insight led me to develop the very React-based portfolio you're viewing now! While this vanilla JS project has since retired, it was an incredibly fun and valuable learning experience.",
+    "link": "https://cv-eva-bjorling.netlify.app/",
+    "modalTitle": "Vanilla JS CV",
+    "gitHubLink": "https://github.com/evesteve94/CV-update",
+    "alt": "Screenshot of my previous CV project",
+    "course": "UX in Web Development",
+    "tech": "Vanilla JavaScript, HTML, CSS & Figma",
+    "date": "March 2024"
+  },
+
+  {
     "title": "King Pizza-rd and the Lizard Wizard",
     "image": "./pizza.png",
     "icon": "",
