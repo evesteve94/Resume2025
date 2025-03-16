@@ -34,7 +34,11 @@ const Footer = () => {
         <div className="footer-right">
           <h3>Socials</h3>
           <li>
-            <a className="footer-link" href="#">
+            <a
+              className="footer-link"
+              href="https://www.linkedin.com/in/eva-bj%C3%B6rling-505058290/"
+              target="_blank"
+            >
               LinkedIn
             </a>
           </li>
