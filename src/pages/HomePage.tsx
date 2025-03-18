@@ -1,46 +1,13 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { FaAnglesRight, FaAnglesLeft, FaGraduationCap } from "react-icons/fa6";
-import { FaBriefcase } from "react-icons/fa";
-import { HiSparkles } from "react-icons/hi2";
-import { MdWavingHand, MdSupervisorAccount } from "react-icons/md";
+import { FaAnglesRight, FaAnglesLeft } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
-import About from "../components/About";
-import Work from "../components/Work";
-import Education from "../components/Education";
-import Skills from "../components/Skills";
-import References from "../components/References";
 import "../styles/home.css";
+import sections from "../components/Sections";
 
-// Profile images from public folder
-const images = [
-  "/frontpage.jpg",
-  "/eyes-closed.jpg",
-  "/sweet.jpg",
-  "/silly.jpg",
-  "/apart.jpg",
-];
-
-// Sections list with IDs and Icons
-const sections = [
-  { id: "about", title: "Hi", icon: <MdWavingHand /> },
-  { id: "education", title: "Education", icon: <FaGraduationCap /> },
-  { id: "work", title: "Work", icon: <FaBriefcase /> },
-  { id: "skills", title: "Skills", icon: <HiSparkles /> },
-  { id: "references", title: "References", icon: <MdSupervisorAccount /> },
-];
-
-// Components array (for easier mapping)
-const components = [
-  <About />,
-  <Education />,
-  <Work />,
-  <Skills />,
-  <References />,
-];
-
-// Home Page Component
 const HomePage = () => {
+  const [flash, setFlash] = useState(false);
+
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -65,38 +32,65 @@ const HomePage = () => {
     setCurrentComponent(index);
   };
 
+  // Keyboard navigation handling
+  const handleKeyDown = (
+    event: React.KeyboardEvent<HTMLButtonElement>,
+    index: number
+  ) => {
+    if (event.key === "Enter" || event.key === " ") {
+      handleSwitchComponent(index);
+    }
+  };
+
+  // Flash animation trigger to hint the navbar (runs only once after 5 seconds)
+  useEffect(() => {
+    const timer = setTimeout(() => setFlash(true), 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="hello-container">
       <div className="greeting">
         {/* Navigation Bar */}
-        <nav className="about-nav">
+        <nav className="about-nav" aria-label="Section navigation">
           <FaAnglesLeft
             className="nav-icon"
             onClick={() =>
               handleSwitchComponent(
-                (currentComponent - 1 + components.length) % components.length
+                (currentComponent - 1 + sections.length) % sections.length
               )
             }
             style={{ cursor: "pointer" }}
+            aria-label="Previous section"
           />
           {sections.map((section, index) => (
             <button
               key={index}
               className={index === currentComponent ? "active" : ""}
               onClick={() => handleSwitchComponent(index)}
+              onKeyDown={(event) => handleKeyDown(event, index)}
+              aria-label={`Go to ${section.title} section`}
+              role="tab"
+              tabIndex={0}
             >
               <span>
                 {section.icon} {index === currentComponent && section.title}
               </span>
             </button>
           ))}
-          <FaAnglesRight
-            onClick={() =>
-              handleSwitchComponent((currentComponent + 1) % components.length)
-            }
-            style={{ cursor: "pointer" }}
-            className="nav-icon"
-          />
+          <motion.div
+            animate={flash ? { color: ["#254441", "#fdac34", "#254441"] } : {}}
+            transition={{ duration: 1, repeat: 1 }}
+          >
+            <FaAnglesRight
+              className="nav-icon"
+              onClick={() =>
+                handleSwitchComponent((currentComponent + 1) % sections.length)
+              }
+              style={{ cursor: "pointer" }}
+              aria-label="Next section"
+            />
+          </motion.div>
         </nav>
 
         {/* Animated Component Display */}
@@ -109,7 +103,7 @@ const HomePage = () => {
             exit={{ x: -direction * 100, opacity: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {components[currentComponent]}
+            {sections[currentComponent].component}
           </motion.div>
         </AnimatePresence>
       </div>
@@ -121,12 +115,13 @@ const HomePage = () => {
             key={currentComponent}
             className="img-div"
             style={{
-              backgroundImage: `url(${images[currentComponent]})`,
+              backgroundImage: `url(${sections[currentComponent].image})`,
             }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.6 }}
+            aria-hidden="true"
           />
         </AnimatePresence>
       </div>

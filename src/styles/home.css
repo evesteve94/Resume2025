@@ -148,6 +148,7 @@ li,
 
 .nav-icon:hover {
   color: #fdac34;
+  transition-duration: 0.3s;
 }
 /* 
 .about-nav .active {
@@ -161,6 +162,7 @@ li,
 
 .download-link:hover {
   color: #fdac34;
+  transition-duration: 0.3s;
 }
 
 .greeting,
@@ -199,8 +201,21 @@ li,
   overflow-x: hidden;
   max-width: 900px;
   padding: 1rem;
-  /* border-top: #fdac34 2px solid; */
+  position: relative; /* Needed for pseudo-elements */
+
+  /* Create a fading effect */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 92%,
+    rgba(0, 0, 0, 0)
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 92%,
+    rgba(0, 0, 0, 0)
+  );
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
