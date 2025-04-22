@@ -1,5 +1,19 @@
 [
   {
+    "title": "evesteve web",
+    "image": "./evesteve-web.png",
+    "icon": "",
+    "description": "evesteve web is a personal project currently under construction, designed to showcase a variety of web development skills and projects. The website is built with React and TypeScript, focusing on clean design, fast performance, and responsiveness across devices. The platform will eventually serve as the foundation for a real business, offering web development services in the future.",
+    "details": "This project is a testbed for experimenting with web technologies and UI/UX design principles. It incorporates custom images and logotypes designed in Figma, demonstrating the potential for creative, tailored branding. The website currently features a range of test content and mockups, including the navigation bar, portfolio section, and an interactive service page. The main goal of evesteve web is to provide an intuitive, visually appealing online experience while preparing for future deployment as a fully functional business website.",
+    "link": "https://evesteve-web.netlify.app/",
+    "modalTitle": "evesteve web",
+    "gitHubLink": "https://github.com/evesteve94/evesteve-web",
+    "alt": "evesteve Web Logo",
+    "course": "Personal Project",
+    "tech": "React, TypeScript, Figma, CSS, HTML",
+    "date": "April 2025"
+  },
+  {
     "title": "Knowledge Base 2.0",
     "image": "./knowledge-base.png",
     "icon": "",
